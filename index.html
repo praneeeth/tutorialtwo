@@ -1,21 +1,16 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
-<head>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 
-
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-
-
-
-
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   
     <style>
         body {
             font-family: 'lato';
@@ -78,215 +73,17 @@
     </style>
 </head>
 <body>
-    <script type="text/javascript">
-        
-        
-         window.addEventListener('load', (event) => {
 
-                      void function $getLines($) {
-                function countLines($element) {
-                    var lines = 0;
-                    var greatestOffset = void 0;
-                    $element.find('character').each(function () {
-                        if (!greatestOffset || this.offsetTop > greatestOffset) {
-                            greatestOffset = this.offsetTop;
-                            ++lines;
-                        }
-                    });
-                    return lines;
-                }
-                $.fn.getLines = function $getLines() {
-                    var lines = 0;
-                    var clean = this;
-                    var dirty = this.clone();
-                    (function wrapCharacters(fragment) {
-                        var parent = fragment;
-                        $(fragment).contents().each(function () {
-                            if (this.nodeType === Node.ELEMENT_NODE) {
-                                wrapCharacters(this);
-                            }
-                            else if (this.nodeType === Node.TEXT_NODE) {
-                                void function replaceNode(text) {
-                                    var characters = document.createDocumentFragment();
-                                    text.nodeValue.replace(/[\s\S]/gm, function wrapCharacter(character) {
-                                        characters.appendChild($('<character>' + character + '</>')[0]);
-                                    });
-                                    parent.replaceChild(characters, text);
-                                }(this);
-                            }
-                        });
-                    }(dirty[0]));
-                    clean.replaceWith(dirty);
-                    lines = countLines(dirty);
-                    dirty.replaceWith(clean);
-                    return lines;
-                };
-            }(jQuery);
-            $('span').each(function () {
-                console.log($(this).getLines());
-                if($(this).getLines() == 1){
-                    // var parentTag = $( this ).parent().get( 0 ).tagName;
-                    // console.log(parentTag)
-                    $( this ).prev().css( "float", "none" )
-                }
-            })
+    <script type="text/javascript" >
 
+        window.addEventListener('load', (event) => {
 
-                     
-            
             const { title } = Qs.parse(location.search, { ignoreQueryPrefix: true })
         document.getElementById("heading").innerHTML = title 
     })
-        function need() {
-            window.parent.postMessage(
-                JSON.stringify({
-                    event_code: "ym-client-event",
-                    data: "id need for speed no limits"
-                }),
-                "*"
-            );
-        }
-        function genshin() {
-            window.parent.postMessage(
-                JSON.stringify({
-                    event_code: "ym-client-event",
-                    data: "i want Genshin Impact ID"
-                }),
-                "*"
-            );
-        }
-        function Zepeto() {
-            window.parent.postMessage(
-                JSON.stringify({
-                    event_code: "ym-client-event",
-                    data: "I want Zepeto code"
-                }),
-                "*"
-            );
-        }
-        function Runeterra() {
-            window.parent.postMessage(
-                JSON.stringify({
-                    event_code: "ym-client-event",
-                    data: "Riot ID Legends Of Runeterra"
-                }),
-                "*"
-            );
-        }
-        function turbo() {
-            window.parent.postMessage(
-                JSON.stringify({
-                    event_code: "ym-client-event",
-                    data: "Find Turbo VPN ID"
-                }),
-                "*"
-            );
-        }
-        function one() {
-            window.parent.postMessage(
-                JSON.stringify({
-                    event_code: "ym-client-event",
-                    data: "Bantu saya temukan ID Punch Man Saya"
-                }),
-                "*"
-            );
-        }
-        function astral() {
-            window.parent.postMessage(
-                JSON.stringify({
-                    event_code: "ym-client-event",
-                    data: "find my Astral Guardians User ID"
-                }),
-                "*"
-            );
-        }
-        function blockman() {
-            window.parent.postMessage(
-                JSON.stringify({
-                    event_code: "ym-client-event",
-                    data: "find my Blockman Go ID"
-                }),
-                "*"
-            );
-        }
-        function tj() {
-            window.parent.postMessage(
-                JSON.stringify({
-                    event_code: "ym-client-event",
-                    data: "I want Tom and Jerry Chase ID"
-                }),
-                "*"
-            );
-        }
-        function life() {
-            window.parent.postMessage(
-                JSON.stringify({
-                    event_code: "ym-client-event",
-                    data: "Bantu saya untuk menemukan ID Pengguna Life After saya"
-                }),
-                "*"
-            );
-        }
-        function ros() {
-            window.parent.postMessage(
-                JSON.stringify({
-                    event_code: "ym-client-event",
-                    data: "Bagaimana cara saya menemukan ID Rules of Survival"
-                }),
-                "*"
-            );
-        }
-        function rag() {
-            window.parent.postMessage(
-                JSON.stringify({
-                    event_code: "ym-client-event",
-                    data: "find my Ragnarok M ID"
-                }),
-                "*"
-            );
-        }
-        function legends() {
-            window.parent.postMessage(
-                JSON.stringify({
-                    event_code: "ym-client-event",
-                    data: "Where Can I Find My Mobile Legends User ID"
-                }),
-                "*"
-            );
-        }
-        function aov() {
-            window.parent.postMessage(
-                JSON.stringify({
-                    event_code: "ym-client-event",
-                    data: "where can i find AOV ID"
-                }),
-                "*"
-            );
-        }
 
 
-        function Island() {
-            console.log("4")
-            window.parent.postMessage(
-                JSON.stringify({
-                    event_code: "ym-client-event",
-                    data: "island king ID"
-                }),
-                "*"
-            );
-        }
 
-         function Domino() {
-            console.log("4")
-            window.parent.postMessage(
-                JSON.stringify({
-                    event_code: "ym-client-event",
-                    data: "Where Can I Find the Higgs Domino ID"
-                }),
-                "*"
-            );
-        }
-        
         function back() {
             window.parent.postMessage(
                 JSON.stringify({
@@ -297,175 +94,170 @@
             );
         }
 
-
-        function callofduty() {
+        function pubguc() {
+            console.log("Redeem Garena Shell Vouchers Call of Duty")
             window.parent.postMessage(
                 JSON.stringify({
                     event_code: "ym-client-event",
-                    data: "Where Can I Find Call of Duty Mobile ID"
+                    data: "PUBG UC"
+                }),
+                "*"
+            );
+
+        }
+
+        function steam() {
+            console.log("Redeem Mobile Legends Item Codes")
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "Steam Wallet Code"
+                }),
+                "*"
+            );
+
+        }
+
+        function blizzardbalance() {
+            console.log("Cara Redeem Kode Voucher Tinder")
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "Blizzard Balance"
                 }),
                 "*"
             );
         }
 
-        function mixu() {
+            function viu() {
             window.parent.postMessage(
                 JSON.stringify({
                     event_code: "ym-client-event",
-                    data: "Where Can I Find My Mixu ID"
-                }),
-                "*"
-            );
-        }
-        function tumili() {
-            window.parent.postMessage(
-                JSON.stringify({
-                    event_code: "ym-client-event",
-                    data: "Where Can I Find Tumile ID"
+                    data: "viu"
                 }),
                 "*"
             );
         }
 
-
-
-
-        function livu() {
+        function minecraft() {
+            console.log("How to Redeem PUBG Mobile Vouchers")
             window.parent.postMessage(
                 JSON.stringify({
                     event_code: "ym-client-event",
-                    data: "Where Can I Find a LivU ID"
+                    data: "Minecraft"
+                }),
+                "*"
+            );
+
+        }
+
+
+        function xbox() {
+            console.log("I want to redeem Nintendo eShop Card")
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "Xbox Gift Card"
                 }),
                 "*"
             );
         }
+
+        function nintendo() {
+            console.log("World of Warships Voucher Codes")
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "Nintendo eShop"
+                }),
+                "*"
+            );
+
+        }
+
+        function freefire() {
+            console.log("World of Warships Voucher Codes")
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "Free Fire Garena Shels"
+                }),
+                "*"
+            );
+
+        }
+
+        function tinder() {
+            console.log("World of Warships Voucher Codes")
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "Tinder"
+                }),
+                "*"
+            );
+
+        }
+
+        function pubgrp() {
+            console.log("Xbox Gift Card")
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "PUBG Royale Pass"
+                }),
+                "*"
+            );
+        }
+
+
+
     </script>
     <div class = "image">
     <img src="https://cdn.yellowmessenger.com/KseiGAPc8y401621566579976.jpeg" alt="" style="float: right;width:25px;height:25px;max-width: 40px;max-height: 40px;margin-right: 4px;" onclick="back()">
     </div>
-        </br>
-        
-      <h5 id = "heading" style ="font-weight:bold" > Please choose the User ID Guide below.  </h5>
-
-
-
-    <button type="button" onclick="legends()" class="right primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/FuXxevambEXI1621263064445.png" alt="Place Holder" /><span> Mobile Legends</span>
+    </br>
+   <b> <h5 id = "heading" >Please choose the voucher redemption tutorial below </h5></b>
+    <button type="button" onclick="pubguc()" class="right primary-btn col-xs-11 text-left">
+        <img src="https://cdn.yellowmessenger.com/iahWOXAmzWw81629803666381.jpg" alt="Place Holder" /><span> PUBG UC </span>
        
-    </button>
-
-    <button type="button" onclick="astral()" class="left primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/4rsuQkAqY6Ix1621269166526.png" alt="Place Holder" /><span> Astral Guardians</span>
+    </button> 
+<button type="button" class="right primary-btn col-xs-11 text-left"  onclick="steam()" >
+        <img src="https://cdn.yellowmessenger.com/I2thP7Lcscoc1629803697820.jpg" alt="Place Holder"/><span>Steam Wallet Code</span>
         
     </button>
 
-
-
-    <button type="button" onclick="need()" class="left primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/3e1pAx0bgiaQ1621267892338.png" alt="Place Holder" /><span> Need For Speed No Limits</span>
-        
-        
-    </button>
-
-
-    <button type="button" onclick="Zepeto()" class="left primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/lZE6Ek9w752k1621268517992.png" alt="Place Holder" /><span> Zepeto</span>
-        
-    </button>
-
-    <button type="button" onclick="blockman()" class="left primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/Ous65PrfVcCL1621269349298.png" alt="Place Holder" /><span> Blockman Go</span>
-       
-    </button>
-
-    <button type="button" onclick="aov()" class="left primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/kvXCObLMi3zo1621263228322.png" alt="Place Holder" /><span> AOV</span>
-       
-    </button>
-
-    <button type="button" onclick="turbo()" class="left primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/8Hc0HGQAk7z81621268850647.png" alt="Place Holder" /><span>  Turbo VPN</span>
-       
-    </button>
-
-
-    <button type="button" onclick="genshin()" class="right primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/cZFvA5OgTgCU1621268392829.png" alt="Place Holder" /><span> Genshin Impact</span>
-        
-    </button>
-
-    <button type="button" onclick="life()" class="left primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/xm9008Qrc5MG1621269863150.png" alt="Place Holder" /><span> Life After</span>
-        
-    </button>
-
-    <button type="button" onclick="rag()" class="right primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/XATl6jiNXKzw1621270097191.png" alt="Place Holder" /><span> Ragnarok M</span>
-       
-    </button>
-
-    <button type="button" onclick="ros()" class="right primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/pXQVfCxbv5g71621270195885.png" alt="Place Holder" /><span> Rules of Survival</span>
-        
-    </button>
-
-    <button type="button" onclick="tj()" class="right primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/YRWeklRFAUUP1621269527394.png" alt="Place Holder" /><span>  Tom & Jerry :Chase</span>
-       
-    </button>
-
-    <button type="button" onclick="one()" class="right primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/3owsfOL0nvk21621268951689.png" alt="Place Holder" /><span>  One Punch Man</span>
-       
-    </button>
-
-    
-    <button type="button" onclick="Runeterra()" class="right primary-btn col-xs-11 text-left">
-        <img src="https://cdn.yellowmessenger.com/gB9kc7REl9ag1621268687340.png" alt="Place Holder" /><span> Legends Of Runeterra</span>
-       
-    </button>
-
- <button type="button" onclick="Island()"class="right primary-btn col-xs-11 text-left">
-            <img src="https://cdn.yellowmessenger.com/ejDdYLmyjByb1622130394434.png" alt="Place Holder" /> <span>  Island King</span>
-          
+    <button type="button" class="right primary-btn col-xs-11 text-left" onclick="blizzardbalance()" >
+        <img src="https://cdn.yellowmessenger.com/7ONlb1BP8DGs1629803743733.jpg" alt="Place Holder"/><span>Blizzard Balance</span>
         </button>
 
-        <button type="button" onclick="Domino()" class="right primary-btn col-xs-11 text-left">
-            <img src="https://cdn.yellowmessenger.com/kDWigRmUyb0c1622130297857.png" alt="Place Holder" /> <span>  Higgs Domino </span>
-         
+    <button type="button" class="right primary-btn col-xs-11 text-left" onclick="viu()" >
+        <img src="https://cdn.yellowmessenger.com/QP4qc27GnqGS1629803765868.jpg" alt="Place Holder"/><span>VIU</span>
+        </button> 
+
+    <button type="button" class="right primary-btn col-xs-11 text-left" onclick="minecraft()" >
+        <img src="https://cdn.yellowmessenger.com/8KO4HtWr31GY1629803787901.jpg" alt="Place Holder"/><span>Minecraft</span>
         </button>
 
 
-         <button type="button" onclick="callofduty()" class="right primary-btn col-xs-11 text-left">
-            <img src="https://cdn.yellowmessenger.com/r8XHLVEnO9pl1623425193591.jpg" alt="Place Holder" />  <span> Call of Duty Mobile </span>
-          
+    <button type="button" class="right primary-btn col-xs-11 text-left" onclick="xbox()" >
+        <img src="https://cdn.yellowmessenger.com/0vOlIVredqmI1629803808047.jpg" alt="Place Holder"/><span>Xbox Gift Card</span>
         </button>
 
-         <button type="button" onclick="livu()" class="right primary-btn col-xs-11 text-left">
-            <img src="https://cdn.yellowmessenger.com/NxCqGyW5gC8m1623425519832.png" alt="Place Holder" />  <span> LivU </span>
-         
+    <button type="button" class="right primary-btn col-xs-11 text-left" onclick="nintendo()" >
+        <img src="https://cdn.yellowmessenger.com/Mt4hp7hCIvCX1629803924541.jpg" alt="Place Holder"/><span>Nintendo eShop</span>
         </button>
 
-          <button type="button" onclick="mixu()" class="right primary-btn col-xs-11 text-left">
-            <img src="https://cdn.yellowmessenger.com/gaIjbJpkRDsQ1623425681721.jpg" alt="Place Holder" />  <span>  Mixu </span>
-         
-        </button>
+    <button type="button" class="right primary-btn col-xs-11 text-left" onclick="freefire()" >
+        <img src="https://cdn.yellowmessenger.com/GBnRmbANTuHb1629803946775.jpg" alt="Place Holder"/><span>Free Fire Garena Shels</span>
+    </button>
 
-          <button type="button" onclick="tumili()" class="right primary-btn col-xs-11 text-left">
-            <img src="https://cdn.yellowmessenger.com/pssU1tVP7FA31623425956368.jpg" alt="Place Holder" />  <span> Tumile</span>
-          
-        </button>
-    
+     <button type="button" class="right primary-btn col-xs-11 text-left" onclick="tinder()" >
+        <img src="https://cdn.yellowmessenger.com/W0NDx7LqLFQo1629803967640.jpg" alt="Place Holder"/><span>Tinder</span>
+    </button>
 
-
-
-
-
-
-
-
-
-
-    
+    <button type="button" class="right primary-btn col-xs-11 text-left" onclick="pubgrp()" >
+        <img src="https://cdn.yellowmessenger.com/W0NDx7LqLFQo1629803967640.jpg" alt="Place Holder"/><span>PUBG Royale Pass</span>
+       </button>
 </body>
 </html>
